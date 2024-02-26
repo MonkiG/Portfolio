@@ -1,0 +1,47 @@
+[
+    {
+        "name": "technologie name 1",
+        "logoUrl": "url 1",
+        "category": "junior"
+    },
+    {
+        "name": "technologie name 2",
+        "logoUrl": "url 2",
+        "category": "junior"
+    },
+    {
+        "name": "technologie name 3",
+        "logoUrl": "url 3",
+        "category": "junior"
+    },
+    {
+        "name": "technologie name 4",
+        "logoUrl": "url 4",
+        "category": "junior"
+    },
+    {
+        "name": "technologie name 5",
+        "logoUrl": "url 5",
+        "category": "junior"
+    },
+    {
+        "name": "technologie name 6",
+        "logoUrl": "url 6",
+        "category": "junior"
+    },
+    {
+        "name": "technologie name 7",
+        "logoUrl": "url 7",
+        "category": "junior"
+    },
+    {
+        "name": "technologie name 1",
+        "logoUrl": "url 1",
+        "category": "learning"
+    },
+    {
+        "name": "technologie name 8",
+        "logoUrl": "url 8",
+        "category": "learning"
+    }
+]

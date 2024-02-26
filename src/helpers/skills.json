@@ -1,0 +1,32 @@
+[
+    {
+        "lang": "en",
+        "languages": [
+            "Spanish (Native)",
+            "English (A2 level, CEFR)"
+        ],
+        "soft": [
+            "Proactive",
+            "Critical thinking",
+            "Autodidact",
+            "Self-critical",
+            "Adaptability",
+            "Communication"
+        ]
+    },
+    {
+        "lang": "es",
+        "languages": [
+            "Español (Nativo)",
+            "Ingles (Nivel A2, MCER)"
+        ],
+        "soft":[
+            "Proactivo",
+            "Pensamiento critico",
+            "Autodidacta",
+            "Autocrítico",
+            "Aprendizaje rapido",
+            "Comunicativo"
+        ]
+    }
+]
