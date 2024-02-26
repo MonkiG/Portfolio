@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets'
+import social from './../helpers/social.json'
+---
+<article class="main-styles shadow">
+    <h2>Social</h2>
+    <div>
+        {social.map(data => (
+            <a href={data.url}><Image src={data.logoUrl} alt={`${data.name} logo`} width={data.name ===  'LinkedIn' ? 50 : 30} height={data.name ===  'LinkedIn' ? 50 : 30} /></a>
+        ))}
+    </div>
+</article>
+
+<style>
+    a {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    article {
+        width: 20%;
+        padding: 10px;
+    }
+    h2 {
+        text-align: center;
+    }
+    div{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+</style>

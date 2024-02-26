@@ -1,0 +1,41 @@
+<!-- Cambiar esto dependiendo el lenguaje-->
+<header>
+    <nav>
+        <ul class="main-styles">
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/technologies">Technologies</a></li>
+            <li><a href="/contact-me">Contact me</a></li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    a {
+        color: white
+    }
+    ul{
+        font-size: larger;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        list-style: none;
+        height: 56px;
+        background-color: var(--main-color);
+    }
+</style>
+
+<script>
+    const anchors = document.querySelectorAll('a')
+    const router = window.history
+    anchors.forEach(a => {
+        const aHref = a.getAttribute('href') ?? ''
+        a.addEventListener('click', (e: MouseEvent) => {
+            e.preventDefault()
+            router.pushState({}, '', aHref)
+            const changeEvent = new Event('routechange') // Crea el evento para escuchar cada que cambie el path
+            window.dispatchEvent(changeEvent)
+        })
+    })
+</script>

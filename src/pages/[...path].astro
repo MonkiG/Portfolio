@@ -1,0 +1,21 @@
+---
+import Layout from './Layout.astro'
+---
+<Layout>
+	<client-container data-route="/"></client-container>
+</Layout>
+
+<script >
+
+    const clientContainer = document.querySelector('client-container')
+
+    const onRouteChange = (e: Event): void => {
+        const target =  e.target as Window & {location: Location}
+        if(!target || !clientContainer) return
+        const newRoute = target.location.pathname
+        clientContainer.setAttribute('data-route', newRoute)
+    }
+
+    window.addEventListener('routechange', onRouteChange)
+    window.addEventListener('popstate', onRouteChange)
+</script>

@@ -1,0 +1,63 @@
+---
+import MainContainer from "../components/MainContainer.astro"
+import Header from "../components/Header.astro"
+import AboutMe from "../components/AboutMe.astro"
+import Social from "../components/Social.astro"
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>MonkiDev</title>
+	</head>
+	<body>
+		<h1>MonkiDev portfolio</h1>
+		<MainContainer>
+			<Header />
+			<AboutMe />
+			<Social />
+			<slot/>
+		</MainContainer>
+	</body>
+</html>
+
+<style is:global>
+	:root{
+		--main-color: #001528;
+		--secondary-color: #0D7476;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: content-box;
+		text-decoration: none;
+	}
+	h1{
+		text-align: center;
+		color: white;
+		padding-top: 1%;
+	}
+	.main-styles {
+		color:white;
+		border-radius: 10px;
+		border-width: 3px;
+		border-style: solid;
+		border-color: var(--secondary-color);
+		background-color: var(--main-color);
+	}
+	.shadow{
+		box-shadow: 0 4px 40px var(--secondary-color);
+	}
+	body {
+		height: 100vh;
+		background-image: linear-gradient(to bottom left, rgba(30,30,30), rgba(1,23,41));
+	} 
+</style>
+
+<script src="./../components/ClientContainer.ts"></script>
+<script src="./../components/ClientHomeComponent.ts"></script>
+<script src="./../components/ClientProjectsComponent.ts"></script>
+<script src="./../components/ClientTechnologiesComponent.ts"></script>
+<script src="./../components/ClientContactMeComponent.ts"></script>

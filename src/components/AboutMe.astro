@@ -1,0 +1,60 @@
+---
+
+import personal from "./../helpers/personal.json"
+import getAge from "./../helpers/getAge.ts"
+
+const personaBirthDate = personal.birthDate.split('/')
+const birthDate = new Date(+personaBirthDate[2], +personaBirthDate[1] - 1, +personaBirthDate[0])
+const currentDate = new Date()
+
+---
+
+<article class="shadow main-styles">
+    <h2>🙌 About me</h2>
+    <dl>
+        <div>
+            <dt>Name:</dt> 
+            <dd>{personal.name}</dd>
+        </div>
+        <div>
+            <dt>Age:</dt>
+            <dd>{getAge(birthDate, currentDate)} años</dd><br>
+        </div>
+        <div>
+            <dt>Country: </dt>
+            <dd>{personal.country}</dd><br>
+        </div>
+        <div>
+            <dt>Mail:</dt>
+            <dd>{personal.mail}</dd><br>
+        </div>
+    </dl>
+</article>
+
+
+<style>
+    div {
+        display: flex;
+      
+    }
+    div dd {
+       margin-left: auto;
+    }
+
+    h2{
+        text-align: left;
+    }
+    dl, h2 {
+        margin: 15px;
+    }
+    dt, dd {
+        display: inline;
+    }
+    dt{
+        margin-right: 5px;
+    }
+    article {
+        width: 20%;
+        margin: 10px 10px 0 0;
+    }
+</style>

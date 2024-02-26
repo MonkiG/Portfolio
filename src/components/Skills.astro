@@ -1,0 +1,57 @@
+---
+import skills from "./../helpers/skills.json"
+import getLanguage from './../helpers/getLanguage.ts'
+
+const filteredData = getLanguage('en', skills)
+---
+<article class="shadow main-styles">
+    <h2>Skills</h2>
+    <div>
+        <div>
+            <h3>Languages: </h3>
+            <ul>
+                {filteredData["languages"].map((language: any) => <li>{language}</li>)}
+            </ul>
+        </div>
+        <div>
+            <h3>Soft Skills:</h3>
+            <ul>
+                {filteredData["soft"].map((skill: any) => <li>{skill}</li>)}
+            </ul>
+        </div>
+    </div>
+</article>
+
+<style>
+    article {
+        padding: 15px;
+        width: 40%;
+    }
+
+    article div {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    div > div {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    h3 {
+        
+        text-align: center;
+    }
+
+    div div:last-child ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        column-gap: 10%;
+    }
+</style>
